@@ -231,3 +231,16 @@ if ("serviceWorker" in navigator) {
       .catch((err) => console.log("Errore Service Worker:", err));
   });
 }
+// app.js
+
+document.addEventListener("DOMContentLoaded", () => {
+  const badgesContainer = document.getElementById('badges-container');
+  if (!badgesContainer) return;
+
+  for (let i = 1; i <= 100; i++) {
+    const badge = document.createElement('span');
+    badge.className = 'badge';
+    badge.textContent = `Badge #${i}`;
+    badgesContainer.appendChild(badge);
+  }
+});
