@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Diario Digitale Colorato - Multiutente</title>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#61dafb" />
+</head>
+<body>
+
+<h1>📒 Diario Digitale Colorato</h1>
+
+<!-- FORM REGISTRAZIONE -->
+<div id="register" class="auth-container" style="display:none;">
+  <h2>Registrati</h2>
+  <input id="reg-username" class="auth-input" placeholder="Username" autocomplete="off" />
+  <input id="reg-password" type="password" class="auth-input" placeholder="Password" autocomplete="off" />
+  <button class="auth-button" onclick="registerUser()">Registrati</button>
+  <p class="switch-text">Hai già un account? <button onclick="showLogin()" class="link-btn">Accedi</button></p>
+</div>
+
+<!-- FORM LOGIN -->
+<div id="login" class="auth-container" style="display:none;">
+  <h2>Accedi</h2>
+  <input id="login-username" class="auth-input" placeholder="Username" autocomplete="off" />
+  <input id="login-password" type="password" class="auth-input" placeholder="Password" autocomplete="off" />
+  <button class="auth-button" onclick="loginUser()">Accedi</button>
+  <p class="switch-text">Non hai un account? <button onclick="showRegister()" class="link-btn">Registrati</button></p>
+</div>
+
+<!-- DIARIO -->
+<div id="diary" style="display:none;">
+  <div id="entry-wrapper">
+    <textarea id="entry" rows="5" placeholder="Scrivi il tuo pensiero qui..."></textarea>
+    <button id="emoji-btn" aria-label="Aggiungi emoji" title="Aggiungi emoji" type="button">😊</button>
+  </div>
+
+  <div id="controls">
+    <button id="new-btn" onclick="newEntry()" aria-label="Nuova nota">🆕 Nuova Nota</button>
+    <button id="save-btn" onclick="saveEntry()" aria-label="Salva pensiero">💾 Salva</button>
+    <button id="console-btn" onclick="addConsolation()" aria-label="Frase di conforto">💬 Consola</button>
+    <button id="delete-all-btn" onclick="deleteAllEntries()" aria-label="Elimina tutte le note">🗑️ Elimina Tutte</button>
+  </div>
+
+  <ul id="entries" aria-live="polite" aria-relevant="additions removals" tabindex="0"></ul>
+
+  <button id="logout-btn" onclick="logout()" aria-label="Esci">🚪 Esci</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@4.6.2/dist/emoji-button.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

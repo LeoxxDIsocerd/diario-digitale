@@ -1,0 +1,246 @@
+/* Reset base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: linear-gradient(135deg, #ece9e6, #ffffff);
+  color: #222;
+  margin: 20px;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #3a0ca3;
+  user-select: none;
+}
+
+/* CONTENITORI AUTH (login/registrazione) */
+.auth-container {
+  max-width: 350px;
+  margin: 0 auto 40px;
+  padding: 25px 30px;
+  background: white;
+  box-shadow: 0 5px 20px rgba(58, 12, 163, 0.15);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  user-select: none;
+}
+
+.auth-container h2 {
+  margin: 0 0 15px;
+  color: #3a0ca3;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* INPUT uniformi */
+.auth-input {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  outline-offset: 2px;
+  outline-color: transparent;
+  transition: border-color 0.25s ease;
+  width: 100%;
+  user-select: text;
+}
+
+.auth-input:focus {
+  border-color: #720026;
+  outline-color: #720026;
+}
+
+/* BUTTON uniformi */
+.auth-button {
+  background: #720026;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  width: 100%;
+}
+
+.auth-button:hover {
+  background: #3a0ca3;
+}
+
+/* Link bottoni */
+.link-btn {
+  background: none;
+  border: none;
+  color: #3a0ca3;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0;
+  margin-left: 5px;
+  user-select: none;
+}
+.link-btn:hover {
+  color: #720026;
+}
+
+/* Paragrafo per switch login/register */
+.switch-text {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* DIARIO */
+
+#entry-wrapper {
+  max-width: 600px;
+  margin: 0 auto 15px;
+  display: flex;
+  gap: 10px;
+  user-select: text;
+}
+
+#entry {
+  flex: 1;
+  resize: vertical;
+  border-radius: 8px;
+  border: 2px solid #720026;
+  padding: 12px 15px;
+  font-size: 1rem;
+  min-height: 100px;
+  font-family: inherit;
+  outline-offset: 2px;
+  outline-color: transparent;
+  transition: outline-color 0.2s ease;
+}
+
+#entry:focus {
+  outline-color: #3a0ca3;
+}
+
+#emoji-btn {
+  background: #3a0ca3;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+#emoji-btn:hover {
+  background: #720026;
+}
+
+#controls {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#controls button {
+  flex: 1 1 140px;
+  padding: 10px 0;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+  background: #720026;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+#controls button:hover {
+  background: #3a0ca3;
+}
+
+#entries {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  padding: 0;
+  list-style: none;
+  user-select: none;
+}
+
+#entries li {
+  background: white;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 10px rgb(58 12 163 / 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#entries li .date {
+  color: #720026;
+  font-weight: 600;
+  margin-right: 12px;
+  white-space: nowrap;
+  user-select: text;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+#entries li span:nth-child(2) {
+  flex: 1;
+  word-wrap: break-word;
+  user-select: text;
+  font-size: 1rem;
+}
+
+.btn-delete {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: #b00020;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.btn-delete:hover {
+  color: #720026;
+}
+
+#logout-btn {
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+  background: #b00020;
+  border: none;
+  padding: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+#logout-btn:hover {
+  background: #720026;
+}
